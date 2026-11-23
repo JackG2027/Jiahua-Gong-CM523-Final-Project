@@ -123,6 +123,40 @@ button, input {
   transform: translateY(0);
 }
 
+.site-footer {
+  margin-top: 4rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--surface);
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-footer p {
+  margin: 0;
+  max-width: 75ch;
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  color: var(--text);
+  text-underline-offset: 0.25em;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
 
 @media (max-width: 768px) {
   .header-content {
@@ -134,4 +168,11 @@ button, input {
   .site-header nav ul {
     gap: 0.5rem 1rem;
   }
+
+    .site-footer {
+    margin-top: 3rem;
+    padding-block: 1.5rem;
+  }
 }
+
+
