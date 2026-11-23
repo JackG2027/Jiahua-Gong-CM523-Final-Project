@@ -2,10 +2,15 @@
 /* ===== START BY IMPORTING YOUR FONTS ===== */ 
 /* ===== NEXT WRITE GLOBAL STYLES, THEN USE MEDIA QUERIES FOR LAYOUT/STYLE ADJUSTMENTS ===== */
 /* ===== STARTER CSS BELOW FOR body AND p IS JUST AN EXAMPLE... YOU MAY DELETE IT ===== */
-
-body {
-    background: magenta;
+* {
+  box-sizing: border-box;
 }
-p {
-    font-size: 2em;
+
+:root {
+  color-scheme: dark;
+  --background: #0f1a33;
+  --surface: #16233f;
+  --text: #f4f1ea;
+  --muted: #a9b4cc;
+  --accent: #ffc53d;
 }
