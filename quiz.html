@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Find a game | GameMatch</title>
+
+    <meta
+      name="description"
+      content="Answer four questions to find Steam games that fit your time, company, mood, and effort."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;700&amp;family=Big+Shoulders+Display:wght@700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-content">
+        <a class="brand" href="index.html">GameMatch.</a>
+
+        <nav aria-label="Main navigation">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="quiz.html" aria-current="page">Find a game</a>
+            </li>
+            <li>
+              <a href="how-it-works.html">How it works</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container quiz-page" tabindex="-1">
+      <h1>Find your next game</h1>
+      <p>Choose one answer for each question.</p>
+
+      <!-- These links jump to each question within this page. -->
+      <nav class="quiz-progress" aria-label="Quiz questions">
+        <ol>
+          <li><a href="#time-question">Time</a></li>
+          <li><a href="#company-question">Who</a></li>
+          <li><a href="#mood-question">Mood</a></li>
+          <li><a href="#effort-question">Effort</a></li>
+        </ol>
+      </nav>
+
+      <form id="game-quiz" action="results.html" method="get">
+        <!-- Radios with the same name form one answer group. -->
+        <fieldset id="time-question" class="quiz-question">
+          <legend>How much time do you have?</legend>
+
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="time" value="quick" required />
+              <span>Up to 30 minutes</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="time" value="hour" required />
+              <span>31–90 minutes</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="time" value="long" required />
+              <span>More than 90 minutes</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="time" value="any" required />
+              <span>No time limit</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="company-question" class="quiz-question">
+          <legend>Who are you playing with?</legend>
+
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="company" value="solo" required />
+              <span>Just me</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="company" value="duo" required />
+              <span>Me and a friend</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="company" value="group" required />
+              <span>A group of three or more</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="company" value="any" required />
+              <span>Solo or social is fine</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="mood-question" class="quiz-question">
+          <legend>What are you in the mood for?</legend>
+
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="mood" value="relaxing" required />
+              <span>Relaxing</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="mood" value="energetic" required />
+              <span>Energetic</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="mood" value="immersive" required />
+              <span>Immersive</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="mood" value="competitive" required />
+              <span>Competitive</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="effort-question" class="quiz-question">
+          <legend>How much mental energy do you want to spend?</legend>
+
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="effort" value="low" required />
+              <span>Keep it light</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="effort" value="medium" required />
+              <span>A little engagement</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="effort" value="high" required />
+              <span>I’m ready to focus</span>
+            </label>
+
+            <label class="quiz-option">
+              <input type="radio" name="effort" value="any" required />
+              <span>Any effort level is fine</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="quiz-actions">
+          <a href="index.html">Back to home</a>
+          <button class="primary-button" type="submit">
+            Find my games
+          </button>
+        </div>
+      </form>
+    </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Created by Jack Gong for CM523.</p>
+
+    <p>
+      <a href="about.html#project-documents">Project documents</a>
+    </p>
+
+    <p>
+      GameMatch is an independent student project and is not
+      affiliated with Valve or Steam.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
